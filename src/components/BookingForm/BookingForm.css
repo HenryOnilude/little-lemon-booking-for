@@ -1,0 +1,307 @@
+/* Little Lemon Booking Form Styles */
+
+/* Container and Layout */
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Typography */
+.booking-form h2 {
+    color: #495E57;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Fieldset and Legend */
+.booking-form fieldset {
+    border: 2px solid #F4CE14;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+.booking-form legend {
+    color: #495E57;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+    background-color: #ffffff;
+}
+
+/* Form Groups */
+.booking-form .form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.booking-form label {
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Input Styles */
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #F4CE14;
+    box-shadow: 0 0 0 3px rgba(244, 206, 20, 0.1);
+}
+
+/* Input Validation States */
+.booking-form input[aria-invalid="true"],
+.booking-form select[aria-invalid="true"],
+.booking-form textarea[aria-invalid="true"] {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.booking-form input[aria-invalid="false"]:not(:placeholder-shown),
+.booking-form select[aria-invalid="false"]:not([value=""]),
+.booking-form textarea[aria-invalid="false"]:not(:placeholder-shown) {
+    border-color: #28a745;
+    background-color: #f8fff8;
+}
+
+/* Select Dropdown */
+.booking-form select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23666' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    appearance: none;
+    padding-right: 40px;
+}
+
+/* Textarea */
+.booking-form textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+/* Error Messages */
+.booking-form .error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+    font-weight: 500;
+}
+
+/* Buttons */
+.booking-form button {
+    background-color: #495E57;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.booking-form button:hover:not(:disabled) {
+    background-color: #3d4f47;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.booking-form button[type="button"] {
+    background-color: #6c757d;
+}
+
+.booking-form button[type="button"]:hover:not(:disabled) {
+    background-color: #5a6268;
+}
+
+/* Submit Button Loading State */
+.booking-form button:disabled {
+    position: relative;
+}
+
+/* Debug Panel */
+.booking-form div[style*="backgroundColor"] {
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.booking-form div[style*="backgroundColor"] strong {
+    color: #495E57;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.booking-form div[style*="backgroundColor"] pre {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    margin: 0;
+    overflow-x: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-form {
+        margin: 1rem;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    
+    .booking-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .booking-form fieldset {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .booking-form .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        font-size: 1rem;
+        padding: 0.625rem;
+    }
+    
+    .booking-form button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .booking-form div[style*="backgroundColor"] {
+        margin-top: 1.5rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-form {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .booking-form h2 {
+        font-size: 1.25rem;
+    }
+    
+    .booking-form fieldset {
+        padding: 0.75rem;
+    }
+    
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+    
+    .booking-form label {
+        font-size: 0.875rem;
+    }
+    
+    .booking-form .error {
+        font-size: 0.75rem;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    .booking-form *,
+    .booking-form *::before,
+    .booking-form *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .booking-form {
+        border: 2px solid;
+    }
+    
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+        border-width: 2px;
+    }
+    
+    .booking-form button {
+        border: 2px solid;
+    }
+}
+
+/* Focus Indicators for Better Accessibility */
+.booking-form input:focus-visible,
+.booking-form select:focus-visible,
+.booking-form textarea:focus-visible,
+.booking-form button:focus-visible {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .booking-form {
+        box-shadow: none;
+        border: 1px solid #000;
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+    
+    .booking-form button {
+        display: none;
+    }
+    
+    .booking-form div[style*="backgroundColor"] {
+        display: none;
+    }
+}

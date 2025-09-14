@@ -1,70 +1,186 @@
-# Getting Started with Create React App
+# Little Lemon Restaurant Booking System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A professional table reservation system built with React for the Little Lemon restaurant. This project demonstrates modern web development practices including form validation, accessibility, responsive design, and comprehensive testing.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+### Core Functionality
+- **Complete Booking Form** - Date, time, party size, customer details, and special requests
+- **Real-time Validation** - Comprehensive form validation with instant feedback
+- **Responsive Design** - Optimised for mobile, tablet, and desktop devices
+- **Accessibility** - WCAG compliant with proper ARIA labels and keyboard navigation
+- **Professional UI** - Clean, modern design matching Little Lemon branding
 
-### `npm start`
+### Validation Features
+- **Date Validation** - Future dates only, no Sundays (restaurant closed), 90-day advance limit
+- **Email Validation** - RFC-compliant email format checking
+- **Phone Validation** - Flexible format supporting UK and international numbers
+- **Name Validation** - Proper character validation and length requirements
+- **Time Validation** - Prevents booking past times for current day
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technical Features
+- **React Hooks** - Modern functional components with useState for state management
+- **Component Architecture** - Modular, reusable components following React best practices
+- **Form State Management** - Controlled components with centralized state
+- **Error Handling** - Graceful error states with user-friendly messaging
+- **Debug Mode** - Real-time form state visualization for development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Technology Stack
 
-### `npm test`
+- **React 19.1.1** - Frontend framework
+- **React DOM 19.1.1** - React rendering
+- **React Scripts 5.0.1** - Build tools and configuration
+- **React Testing Library** - Unit testing framework
+- **Jest** - Test runner
+- **CSS3** - Styling with modern CSS features
+- **ES6+** - Modern JavaScript features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation
 
-### `npm run build`
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd littlelemon
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-### `npm run eject`
+## 🧪 Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project includes comprehensive unit tests covering all form functionality:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Run all tests
+npm test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Run tests with coverage report
+npm test -- --coverage --watchAll=false
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Run tests in watch mode
+npm test
+```
 
-## Learn More
+### Test Coverage
+- **15 comprehensive test cases** covering all form functionality
+- **Form validation testing** - All validation rules tested
+- **User interaction testing** - Click, type, and form submission flows
+- **Accessibility testing** - ARIA attributes and screen reader compatibility
+- **Error state testing** - Invalid input handling and error messages
+- **Success state testing** - Valid form submission flows
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Styling and Design
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Responsive Breakpoints
+- **Desktop**: > 768px - Full layout with optimal spacing
+- **Tablet**: 768px - 481px - Adapted layout for medium screens
+- **Mobile**: ≤ 480px - Compact layout with touch-friendly controls
 
-### Code Splitting
+### Accessibility Features
+- **ARIA Labels** - Proper labeling for screen readers
+- **Focus Management** - Clear focus indicators and logical tab order
+- **Error Announcements** - Screen reader announcements for validation errors
+- **High Contrast Support** - Enhanced visibility for users with visual impairments
+- **Reduced Motion Support** - Respects user's motion preferences
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Colour Palette
+- **Primary Green**: #495E57 (Little Lemon brand color)
+- **Accent Yellow**: #F4CE14 (Little Lemon highlight color)
+- **Success Green**: #28a745 (Valid input states)
+- **Error Red**: #dc3545 (Error states and messages)
 
-### Analyzing the Bundle Size
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+src/
+├── components/
+│   └── BookingForm/
+│       ├── BookingForm.js          # Main form component
+│       ├── BookingForm.css         # Component styles
+│       └── BookingForm.test.js     # Unit tests
+├── App.js                          # Main app component
+├── App.css                         # Global styles
+└── index.js                        # Application entry point
+```
 
-### Making a Progressive Web App
+## 🚀 Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Development
+- **`npm start`** - Start development server at http://localhost:3000
+- **`npm test`** - Run test suite with watch mode
+- **`npm run build`** - Create production build
+- **`npm run eject`** - Eject from Create React App (one-way operation)
 
-### Advanced Configuration
+### Production
+- **`npm run build`** - Optimized production build
+- **`npm run build && serve -s build`** - Build and serve production version
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌐 Browser Support
 
-### Deployment
+- **Chrome** - Latest 2 versions
+- **Firefox** - Latest 2 versions  
+- **Safari** - Latest 2 versions
+- **Edge** - Latest 2 versions
+- **Mobile Safari** - iOS 12+
+- **Chrome Mobile** - Android 8+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## ♿ Accessibility Compliance
 
-### `npm run build` fails to minify
+This application follows WCAG 2.1 AA guidelines:
+- ✅ Keyboard navigation support
+- ✅ Screen reader compatibility
+- ✅ Proper color contrast ratios
+- ✅ Focus management
+- ✅ Error identification and description
+- ✅ Form labels and instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔧 Development Notes
+
+### Form Validation Strategy
+The application uses a hybrid validation approach:
+1. **Real-time validation** - Validates fields as user types
+2. **Submit validation** - Comprehensive validation before form submission
+3. **Visual feedback** - Color-coded inputs and clear error messages
+
+### State Management
+- Uses React's `useState` hook for local component state
+- Centralized form data object for easy management
+- Separate error state tracking for each field
+
+### Performance Considerations
+- Debounced validation to prevent excessive re-renders
+- Controlled components for predictable behavior
+- Minimal re-renders through strategic state updates
+
+## 🚧 Future Enhancements
+
+- [ ] Integration with backend API for form submission
+- [ ] Email confirmation system
+- [ ] Calendar integration for availability checking
+- [ ] Multiple language support (i18n)
+- [ ] Advanced booking features (recurring reservations)
+- [ ] Integration with payment systems
+- [ ] SMS confirmation system
+
+## 📄 License
+
+This project is created for educational purposes as part of the Meta Front-End Developer Capstone project.
+
+## 👨‍💻 Author
+
+**Henry Onilude**  
+Meta Front-End Developer Capstone Project
+
+---
+
+**Note**: This is a demonstration project created for the Meta Front-End Developer Professional Certificate program. It showcases modern React development practices and responsive web design principles.
